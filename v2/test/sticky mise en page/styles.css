@@ -1,0 +1,48 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+  /* Section styles */
+  section {
+    margin-bottom: 40px; /* Espacement entre les sections */
+  }
+  
+  /* Sticky title */
+  h2 {
+    position: sticky;
+    top: 0; /* Reste en haut de l'écran */
+    background-color: #fff; /* Fond blanc pour lisibilité */
+    margin: 0; /* Supprime les marges autour du titre */
+    padding: 10px; /* Espacement intérieur du titre */
+    border-bottom: 2px solid #ddd; /* Ligne pour séparer visuellement */
+    z-index: 10; /* Assure que le titre passe au-dessus des autres éléments */
+  }
+  
+  /* Flexbox container */
+  .flexbox {
+    display: flex;
+    justify-content: space-around; /* Espace égal entre les éléments */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les items */
+    padding: 20px; /* Espacement intérieur autour des items */
+    background-color: #eaeaea;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  /* Flexbox items */
+  .item {
+    background-color: #fff;
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px); /* Largeur flexible, minimum 30% */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  

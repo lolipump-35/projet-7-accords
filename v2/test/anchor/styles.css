@@ -1,0 +1,14 @@
+body{
+    height: 50000px;
+}
+
+
+.anchor {
+    position: absolute; /* Place l'ancre à un endroit précis */
+    top: 1000px; /* Change cette valeur pour ajuster la hauteur de l'ancre */
+    height: 0; /* L'ancre reste invisible */
+    width: 100%; /* Assure un effet aligné */
+    /* visibility: hidden;  */
+    background-color: aqua;
+  }
+  
