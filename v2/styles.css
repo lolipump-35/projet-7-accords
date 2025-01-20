@@ -113,8 +113,7 @@ body {
     left: 2rem;
     display: flex;
     align-items: center;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-}
+   }
 
 @media(min-width:768px) {
     .acceuil>.button {
@@ -137,6 +136,7 @@ body {
     border-radius: 15px;
     animation: zoomInOut 1.1s infinite;
     text-decoration: none;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 @media(min-width:768px) {
@@ -416,12 +416,40 @@ body {
     object-fit: cover;
     transform: scale(0.60);
 }
+
+
+
+
+
 .fonctionnement>.note>.img-container>img{
-    transform: scale(0.4);
+    transform: scale(0.3);
 }
-.fonctionnement>.intervalle>.img-container>img{
-    transform: scale(0.5);
+@media(min-width:768px){
+    .fonctionnement>.note>.img-container>img{
+        transform: scale(0.7);
+    }
 }
+.fonctionnement>.gammes>.img-container>img{
+    transform: scale(0.55);
+}
+@media(min-width:768px){
+    .fonctionnement>.gammes>.img-container>img{
+        transform: scale(1);
+    }
+}
+.fonctionnement>.tonalite>.img-container>img{
+    transform: scale(0.28) translateX(15px);
+}
+@media(min-width:768px){
+    .fonctionnement>.tonalite>.img-container>img{
+        transform: scale(0.45);
+    }
+}
+
+
+
+
+
 
 
 .fonctionnement .shared-section .question {
@@ -438,7 +466,6 @@ body {
     padding-left: 1rem;
 }
 
-
 .fonctionnement .shared-section .button a p {
     opacity: 0.5;
     background-color: black;
@@ -447,12 +474,138 @@ body {
     position: absolute;
     top: 63vh;
     left: 31vw;
+}    
+
+
+
+
+
+
+
+
+.fonctionnement .introduction .button a p{
+    width: 8vw;
+    height: 20vh;
+    top: 63vh;
+    left: 30vw;
+}    
+@media(min-width:768px){
+    .fonctionnement .introduction .button a p{
+        width: 3.54vw;
+        height: 20vh;
+        top: 63vh;
+        left: 20vw;
+    }    
+}    
+.fonctionnement .note .button a p{
+    width: 7vw;
+    height: 20vh;
+    top: 63vh;
+    left: 33vw;
+}    
+@media(min-width:768px){
+    .fonctionnement .note .button a p{
+        width: 3.5vw;
+        left: 17vw;
+    }    
+}    
+.fonctionnement .gammes .button a p{
+    width: 18vw;
+    height: 20vh;
+    top: 63vh;
+    left: 28vw;
+} 
+@media(min-width:768px){
+    .fonctionnement .gammes .button a p{
+        width: 8vw;
+        height: 20vh;
+        top: 63vh;
+        left: 33vw;
+    } 
 }
-.fonctionnement .intervalle .button a p{
-    width: 30vw;
-    left: 21vw;
-    top: 68vh;
+.fonctionnement .gammes .button1 a p{
+    width: 18vw;
+    height: 20vh;
+    top: 66vh;
+    left: 73vw;
+    position: absolute;
+    background-color: red;
+    opacity: 0.5;
 }
+@media(min-width:768px){
+    .fonctionnement .gammes .button1 a p{
+        width: 7vw;
+        left: 17vw;
+    }
+}
+.fonctionnement .tonalite .button a p{
+    width: 8vw;
+    height: 20vh;
+    top: 72vh;
+    left: 24vw;
+} 
+@media(min-width:768px){
+    .fonctionnement .tonalite .button a p{
+        width: 2vw;
+        height: 10vh;
+        top: 73vh;
+        left: 16vw;
+    } 
+}
+
+
+
+
+
+
+
+
+.fonctionnement> .intervalle >.text-container{
+    grid-area: 5/2/6/3;
+    border: solid black 1px;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem   ;
+}
+
+.fonctionnement> .intervalle >.text-container>.reponse {
+    width: 45%;
+    height: 50%;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #EDB57A;
+    color: white;
+    position: relative;
+}
+.fonctionnement> .intervalle >.text-container>.reponse2>a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bleu{
+    color: rgb(0, 89, 255);
+}
+.rouge{
+    color: red;
+}
+
+
+
+
 
 
 
