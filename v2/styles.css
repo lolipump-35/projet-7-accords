@@ -438,7 +438,7 @@ body {
     }
 }
 .fonctionnement>.tonalite>.img-container>img{
-    transform: scale(0.28) translateX(15px);
+    transform: scale(0.24) translateX(15px);
 }
 @media(min-width:768px){
     .fonctionnement>.tonalite>.img-container>img{
