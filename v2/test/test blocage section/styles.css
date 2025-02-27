@@ -1,0 +1,56 @@
+/* Applique le défilement fluide globalement à toute la page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style pour le bouton de départ */
+.button-start {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-start a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button-start a:hover {
+    background-color: #0056b3;
+}
+
+/* Cache toutes les sections au début */
+.chapitre {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Pleine hauteur pour bien voir le changement */
+    text-align: center;
+}
+
+/* Affichage de la première section */
+.chapitre:first-of-type {
+    display: flex;
+}
+
+/* Style des boutons de navigation */
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #1e7e34;
+}

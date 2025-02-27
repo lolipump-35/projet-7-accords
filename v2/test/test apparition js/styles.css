@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+button{
+    width: 20vw;
+    height: 20vh;  
+    margin: 5vw;
+}
+
+.button1{
+    background-color: greenyellow;
+}
+.button2{
+    background-color: yellow;
+}
+.button3{
+    background-color: orange;
+}
+.button4{
+    background-color: red;
+}

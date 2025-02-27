@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Empêche le scroll global */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section > .idée {
+    width: 100vw;
+    height: 150vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template: 70px 1fr / 1fr;
+}
+
+.section > .idée > h1 {
+    background-color: orange;
+    grid-area: 1 / 2 / 2 / 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 20px;
+    display: none;
+}
+
+.button-container.visible {
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
