@@ -1,5 +1,4 @@
-html
-{
+html {
   width: 100%;
   height: 100%;
   display: flex;
@@ -16,6 +15,7 @@ html
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -408,7 +408,7 @@ html
   height: 100vh;
   display: none;
   grid-template: 8% 1% 3% 1% 35% 1% 18% 1% 10% 1% 8% 1% 9% / 5% 1fr 5%;
-}
+ }
 
 .notion-container > .titre {
   display: flex;
@@ -418,12 +418,6 @@ html
   background-color: #c6670c;
   color: white;
   font-size: 1.5rem;
-}
-
-.notion-container > .score-notion {
-  grid-area: 3/2/4/3;
-  border: solid #a7a7a7 1px;
-  border-radius: 5px;
 }
 
 .notion-container > .explication {
@@ -518,4 +512,45 @@ html
 }
 .notion-container9 > .img-container > img {
   transform: scale(0.37) translate(0px, 0px);
+}
+
+/* scorebar */
+
+.scoreBar {
+  width: 90%;
+  height: 3%;
+  display: none;
+  grid-template: 1fr/repeat(9,1fr);
+  border: solid #a7a7a7 1px;
+  border-radius: 5px;
+  position: absolute;
+  top: 9%;
+  z-index: 100;
+}
+
+/* goodAnswer */
+
+.container-goodAnswer {
+  width: 100%;
+  height: 100%;
+  grid-area: 5/2/6/3;
+  display: none;
+}
+
+.goodAnswer {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.goodAnswer>.button_question_next{
+  width: 50%;
+  height: 20%;
+  border-radius: 10px;
+  border: none;
 }

@@ -19,6 +19,7 @@ const button_accord_7 = document.getElementById("button_accord_7");
 // section
 const navbar_section = document.getElementById("navbar_section");
 const all_sections = document.querySelectorAll(".allsection");
+console.log("allsections:", all_sections);
 const section_acceuil = document.getElementById("section_acceuil");
 const section_index = document.getElementById("section_index");
 const section_sept_accord = document.getElementById("section_sept_accord");
@@ -171,13 +172,22 @@ button_degres_navbar.addEventListener("click", function () {
 const all_notions = document.querySelectorAll(".notion-container");
 console.log("Toutes les sections (all_notions) :", all_notions);
 
+const button_question_next = document.querySelectorAll(".button_question_next");
+console.log("Tous les boutons (buttons_question) :", button_question_next);
+
 const button_question_true = document.querySelectorAll(".button_question_true");
 console.log("Tous les boutons (buttons_question) :", button_question_true);
 
-const button_question_false = document.querySelectorAll(".button_question_false");
+const button_question_false = document.querySelectorAll(
+  ".button_question_false"
+);
 
-const section_notion1 = document.getElementById("section_notion1");
-console.log(section_notion1);
+const explications = document.querySelectorAll(".explication");
+
+const goodAnswers = document.querySelectorAll(".container-goodAnswer");
+
+const scoreBar = document.querySelector(".scoreBar");
+console.log("scoreBar", scoreBar);
 
 const button_index_2 = document.getElementById("button_index_2");
 const button_theorie_navbar = document.getElementById("theorie_navbar");
@@ -191,16 +201,59 @@ function showNextSection(index) {
     console.log(`notions afficher ${index + 1}`);
     console.log(all_notions[index + 1]);
   }
+  explications.forEach((explication) => {
+    explication.style.display = "grid";
+  });
+  goodAnswers.forEach((goodAnswer) => {
+    goodAnswer.style.display = "none";
+  });
 }
 
+function resetColor(){
+  button_question_false.forEach(button => {
+    button.style.backgroundColor = "";
+  });
+  button_question_true.forEach(button => {
+    button.style.backgroundColor = "";
+  });
+  cases.forEach(element => {
+    element.style.backgroundColor = "";
+  });
+  explications.forEach((explication) => {
+    explication.style.display = "grid";
+  });
+  goodAnswers.forEach((goodAnswer) => {
+    goodAnswer.style.display = "none";
+  });
+  
+}
+
+// showgoodanswer
 button_question_true.forEach((button, index) => {
+  button.addEventListener("click", function () {
+    button.style.backgroundColor = "green";
+
+    if (button.style.backgroundColor === "green") {
+      cases[index].style.backgroundColor = "green";
+    }
+
+    explications.forEach((explication) => {
+      explication.style.display = "none";
+    });
+    goodAnswers.forEach((goodAnswer) => {
+      goodAnswer.style.display = "grid";
+    });
+  });
+});
+
+button_question_next.forEach((button, index) => {
   button.addEventListener("click", function () {
     console.log("button click", button);
     showNextSection(index);
   });
 });
 
-button_question_false.forEach(button => {
+button_question_false.forEach((button) => {
   button.addEventListener("click", function () {
     button.style.backgroundColor = "red";
   });
@@ -216,7 +269,11 @@ button_index_2.addEventListener("click", function () {
       section.style.display = "none";
     }
   });
+  show(scoreBar);
+  resetColor();
+
 });
+
 button_theorie_navbar.addEventListener("click", function () {
   all_sections.forEach((section) => {
     if (section === all_notions[0]) {
@@ -227,7 +284,17 @@ button_theorie_navbar.addEventListener("click", function () {
       section.style.display = "none";
     }
   });
+  show(scoreBar);
+  resetColor();
+
 });
+
+const cases = document.querySelectorAll(".case");
+console.log("nbr de cases", cases);
+
+
+ 
+
 
 // Récupérer toutes les sections et les boutons
 // const all_notions = document.querySelectorAll(".notion-container");
