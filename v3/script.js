@@ -231,11 +231,10 @@ function resetColor(){
 // showgoodanswer
 button_question_true.forEach((button, index) => {
   button.addEventListener("click", function () {
-    button.style.backgroundColor = "green";
+    button.style.backgroundColor = "#86EB9A";
 
-    if (button.style.backgroundColor === "green") {
-      cases[index].style.backgroundColor = "green";
-    }
+    button.style.backgroundColor = "#86EB9A";
+    cases[index].style.backgroundColor = "#86EB9A";
 
     explications.forEach((explication) => {
       explication.style.display = "none";
